@@ -1,0 +1,14 @@
+.tri-state-switch {
+    display: inline-block;
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+
+    &.__neutral {
+        filter: opacity(50%);
+    }
+    
+    img {
+        width: 100%;
+    }
+}

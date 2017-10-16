@@ -1,0 +1,103 @@
+$BOUNCE-HEIGHT: 60px;
+$BOUNCE-ANIMATION: bounce 3.0s infinite cubic-bezier(.62, .28, .23, .99) both;
+
+.loader-container {
+    position: relative;
+    display: flex;
+    flex: 1;
+    min-width: 100%;
+    min-height: 300px;
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.loader .ball {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-animation: $BOUNCE-ANIMATION;
+    animation: $BOUNCE-ANIMATION;
+
+    &+.ball {
+        margin-left: 20px;
+    }
+}
+
+.loader .ball:first-child {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+.loader .ball:nth-child(2) {
+    -webkit-animation-delay: -0.08s;
+    animation-delay: -0.08s;
+}
+
+@keyframes bounce {
+    0% {
+        bottom: 0;
+        background-color: #03A9F4;
+    }
+    16.66% {
+        bottom: $BOUNCE-HEIGHT;
+        background-color: #FB6542;
+    }
+    33.33% {
+        bottom: 0px;
+        background-color: #FB6542;
+    }
+    50% {
+        bottom: $BOUNCE-HEIGHT;
+        background-color: #FFBB00;
+    }
+    66.66% {
+        bottom: 0px;
+        background-color: #FFBB00;
+    }
+    83.33% {
+        bottom: $BOUNCE-HEIGHT;
+        background-color: #03A9F4;
+    }
+    100% {
+        bottom: 0;
+        background-color: #03A9F4;
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        bottom: 0;
+        background-color: #03A9F4;
+    }
+    16.66% {
+        bottom: $BOUNCE-HEIGHT;
+        background-color: #FB6542;
+    }
+    33.33% {
+        bottom: 0px;
+        background-color: #FB6542;
+    }
+    50% {
+        bottom: $BOUNCE-HEIGHT;
+        background-color: #FFBB00;
+    }
+    66.66% {
+        bottom: 0px;
+        background-color: #FFBB00;
+    }
+    83.33% {
+        bottom: $BOUNCE-HEIGHT;
+        background-color: #03A9F4;
+    }
+    100% {
+        bottom: 0;
+        background-color: #03A9F4;
+    }
+}

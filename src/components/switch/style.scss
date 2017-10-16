@@ -1,0 +1,12 @@
+.switch {
+    display: none;
+    width: 40px;
+    height: auto;
+    &.__active {
+        display: inline-block;
+    }
+
+    img {
+        width: 100%;
+    }
+}

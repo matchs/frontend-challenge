@@ -1,0 +1,65 @@
+@import './variables.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    background-color: #222;
+    background-image: url("../public/assets/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: roboto, sans;
+    color: $DEFAULT-TEXT-COLOR;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    position: fixed;
+    top: 0;    
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    min-height: 100%;
+    overflow-y: scroll;
+}
+
+@media(min-width: 767px) {
+    .main-container {
+        left: 25%;
+        padding: 20px 25% 20px 0;
+    } 
+}
+
+@media(max-width: 766px) {
+    .main-container  {
+        left: 5%;
+        padding: 20px 5% 20px 0;
+    }
+}
+
+.search-filter-container {
+    border-radius: 15px;
+    padding: 15px;
+    background-color: $DEFAULT-BG-COLOR;
+}
+
+.section {
+    &+.section {
+        margin-top: 25px;
+    }
+}
+
+.details-container {
+    background-color: $DEFAULT-BG-COLOR;
+    padding: 20px;
+    border-radius: 15px;
+}

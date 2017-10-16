@@ -1,0 +1,111 @@
+@import '../../style/variables.scss';
+
+.card {
+    display: flex;
+    background-color: $DEFAULT-BG-COLOR;
+    min-height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 0;
+
+    &.__small {
+        flex: 0.5;
+        padding-top: $DEFAULT-PADDING-SIZE;
+        padding-bottom: $DEFAULT-PADDING-SIZE;
+        flex-direction: column;
+        min-width: 45%;
+        height: fit-content;
+
+        margin: 10px;
+
+        .content-section {
+            padding-left: $DEFAULT-PADDING-SIZE;
+            padding-right: $DEFAULT-PADDING-SIZE;
+            margin-bottom: $DEFAULT-PADDING-SIZE;
+        }
+
+        .poster-section {
+            .poster {
+                width: 100%;
+            }
+        }
+    }
+
+    &.__large {
+        flex: 1;
+        padding-left: $DEFAULT-PADDING-SIZE;
+        padding-right: $DEFAULT-PADDING-SIZE;
+        flex-direction: row-reverse;
+        min-width: 100%;
+        
+        .content-section {
+            padding-top: $DEFAULT-PADDING-SIZE;
+            padding-bottom: $DEFAULT-PADDING-SIZE;
+            margin-left: $DEFAULT-PADDING-SIZE;
+        }
+    }
+
+    &+.card {
+        margin-top: 20px;
+    }
+}
+
+.card .top-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    .title {
+        flex: 0.75;
+        width: 75%;
+        min-width: 75%;
+        font-weight: bold;
+    }
+
+    .subtitle {
+        flex: 0.25;
+    }
+
+    .score {
+        flex: 0.25;
+        width: 25%;
+        min-width: 25%;
+        text-align: right;
+    }
+}
+
+.card .title {
+    font-size: 22px;
+}
+
+.card .subtitle {
+    font-size: 18px;
+}
+
+.card .score {
+    font-size: 32px;
+}
+
+.card .content-section {
+    flex: 0.8;
+
+    .description {
+        margin-top: 20px;
+    }
+}
+
+.card .poster-section {
+    display: flex;
+    align-items: center;
+    flex: 0.2;
+
+    .poster {
+        display: flex;
+        width: 200px;
+    }
+}
+
+.card .description {
+    font-size: 18px;   
+}

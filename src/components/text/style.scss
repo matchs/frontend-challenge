@@ -1,0 +1,30 @@
+@import '../../style/variables.scss';
+
+.header {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+}
+
+.subtitle {
+    font-size: 22px;
+    display: inline-block;
+}
+
+.label {
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.paragraph {
+    font-size: 18px;
+    display: block;
+}
